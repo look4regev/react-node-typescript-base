@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www | pino-pretty",
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write \"src/**/*.ts*\""
@@ -14,10 +15,14 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "pino": "^8.1.0",
+    "pino-http": "^8.1.1"
   },
   "devDependencies": {
     "eslint": "^8.12.0",
+    "nodemon": "^2.0.19",
+    "pino-pretty": "^8.1.0",
     "prettier": "^2.6.2"
   }
 }
