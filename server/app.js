@@ -2,7 +2,6 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-// var logger = require('morgan');
 const pino = require('pino-http')()
 const helmet = require("helmet");
 
@@ -16,7 +15,6 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// app.use(logger('dev'));
 app.use(pino)
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
